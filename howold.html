@@ -27,13 +27,13 @@
 
 <script>
     var today = new Date();
-    var birth = new Date(1999, 08, 21, 08);
-    var lastbirth = new Date(today.getFullYear(), 08, 21, 08);
+    var birth = new Date(1999, 11, 01);
+    var lastbirth = new Date(today.getFullYear(), 11, 01);
     var years = today.getFullYear() - birth.getFullYear();
     var months = today.getMonth() - birth.getMonth();
     if (months < 0 || (months === 0 && today.getDate() < birth.getDate())) {
         years --;
-        lastbirth = new Date(today.getFullYear()-1, 08, 21, 08);
+        lastbirth = new Date(today.getFullYear()-1, 11, 01);
     }
     var days = Math.floor((today - lastbirth) / (1000 * 3600 * 24));
     var hrs = Math.floor(today.getHours() - birth.getHours());
